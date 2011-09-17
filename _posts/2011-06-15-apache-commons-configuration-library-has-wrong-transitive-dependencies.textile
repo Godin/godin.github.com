@@ -1,0 +1,68 @@
+---
+layout: post
+title:  Apache commons-configuration library has wrong transitive dependencies
+---
+
+Latest version of Apache commons-configuration library is 1.6 and depends on commons-beanutils-core 1.8.0 and on commons-digester 1.8 , so dependency tree looks like :
+
+<pre>
+commons-configuration:commons-configuration:jar:1.6:compile
++- commons-digester:commons-digester:jar:1.8:compile
+|  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+\- commons-beanutils:commons-beanutils-core:jar:1.8.0:compile
+</pre>
+
+What’s pretty funny :
+
+* commons-beanutils 1.7.0 has memory leaks, which were fixed in 1.8.0,
+* commons-digester 1.8.1 depends on commons-beanutils 1.8.0,
+* but in any case commons-beantuils and commons-beanutils-core - is a kind of duplication - from BeanUtils site : "commons-beanutils - contains everything; commons-beanutils-core - excludes Bean Collections classes".
+
+One of the ways to fix this - exclude commons-beanutils-core from commons-configuration and enforce that only commons-beanutils used :
+
+{% highlight xml %}
+<dependencies>
+  <dependency>
+    <groupId>commons-configuration</groupId>
+    <artifactId>commons-configuration</artifactId>
+    <version>1.6</version>
+    <exclusions>
+      <exclusion>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils-core</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+</dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-enforcer-plugin</artifactId>
+      <version>1.0</version>
+      <executions>
+        <execution>
+          <id>enforce-banned-dependencies</id>
+          <goals>
+            <goal>enforce</goal>
+          </goals>
+          <configuration>
+            <rules>
+              <bannedDependencies>
+                <message>commons-beanutils:commons-beanutils should be used instead</message>
+                <excludes>
+                  <exclude>commons-beanutils:commons-beanutils-core</exclude>
+                </excludes>
+                <searchTransitive>true</searchTransitive>
+              </bannedDependencies>
+            </rules>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+{% endhighlight %}
+
+What all this means for you? Again - you decide ;) But for me (after all troubles with this library) it means that commons-configuration is a dead project and I will never use it as a dependency for my new projects.

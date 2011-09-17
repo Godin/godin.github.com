@@ -1,0 +1,84 @@
+---
+layout:     page
+permalink:  /curriculum-vitae/
+title:      Curriculum Vitae
+---
+
+h2. Curriculum Vitae
+
+h3. Evgeny Andreevich Mandrikov
+
+Born December 4th, 1986, Chelyabinsk, Russia
+
+h4. Work Experience
+
+* 09/2010 - present : SonarSource (Switzerland)
+  Position title: Software Developer
+  Projects: Open platform to manage code quality
+* 07/2008 - 05/2010 : Tek Laboratories (Russia-Finland)
+  Position title: Software Developer, Technical Leader and System Administrator
+  Projects: Logistic systems for health care
+* 01/2007 - 07/2008 : Tek Laboratories (Russia-Finland)
+  Position title: Junior Developer
+  Project: Real-time car fleet monitoring desktop application with natural geo map interface.
+* 03/2006 - 12/2006 : Scientific Methodical Center of Admiralty district in Saint-Petersburg
+  Position title: System Administrator
+* 04/2006 - 06/2006 : Scientific Industrial Firm “Technological equipment”
+  Position title: Software Developer
+  Project: System for monitoring industrial thickness gauges
+* 10/2000 - 08/2004 : Chelyabinsk Physical and Mathematical Lyceum #31
+  Position title: Laboratory Assistant
+
+h4. Open Sources Experiences
+
+* 01/2011 - present : Apache Committer
+* 01/2011 - present : JaCoCo Committer
+* 01/2010 - present : Hudson/Jenkins Committer
+* 12/2009 - present : Codehaus Committer
+
+h4. Education
+
+* 2008 - 2010 : Saint-Petersburg State University of Information Technologies, Mechanics and Optics. Master of Applied Mathematics and Informatics.
+* 2004 - 2008 : Saint-Petersburg State University of Information Technologies, Mechanics and Optics. Bachelor of Applied Mathematics and Informatics.
+* 1997 - 2004 : Chelyabinsk Physical and Mathematical Lyceum #31.
+* 1994 - 1997 : Chelyabinsk School #135.
+
+h4. Skills
+
+* Programming languages: *Java*, Ruby, Flex / ActionScript, Groovy, C, C++, PHP, Pascal (Borland Pascal, Delphi), Perl;
+* Development systems: *Sun JDK* 1.4/1.5/1.6, Eclipse, IntelliJ IDEA, MS Visual Studio 6/7/7.1, Borland Delphi 5/6/7;
+* Version Control Systems: *Git*, *Subversion*, CVS;
+* Continuous Integration Systems: *Jenkins*, Hudson, Bamboo, TeamCity;
+* Continuous Inspection Systems: *Sonar*;
+* Build Tools: *Maven*, Ant;
+* Libraries/Technologies:
+** GUI: Java AWT, Swing, Win32 API, MFC;
+** Databases: SQL (*PostgreSQL*, MySQL, Oracle)
+** Web: Apache, nginx, HTML, XHTML, CSS, Java Servlets;
+** Graphics: OpenGL;
+** Testing Frameworks: *JUnit*, TestNG;
+** Other: XML/XSD/XSL, JBoss AS;
+* Operating systems: *Linux* (*Gentoo*, Fedora, Ubuntu), FreeBSD, MS Windows;
+* Language: Russian (native), English.
+
+h4. Achievements
+
+* Acquired III diploma at I Russian Command Olympiad in Informatics in 2000-2001 year.
+* Acquired I diploma at II Russian Command Olympiad in Informatics in 2001-2002 year.
+* Acquired III diploma at XVI Russian Olympiad in Informatics in 2003-2004 year.
+* Took part in ACM ICPC in 2004-2005 year.
+* Google Summer of Code 2010 as a student.
+* Google Summer of Code 2011 as a mentor.
+
+h4. Teaching activities
+
+* Lecturing in Saint-Petersburg State University of Information Technologies, Mechanics and Optics (2009-2011):
+** Machine Learning
+** Information security
+* Lecturing in school in Saint-Petersburg (2005-2006).
+* Lecturing in summer informatical camps for high school students in Chelyabinsk (2004-2006, 2010-2011).
+
+h4. Personal
+
+* Agile, self-motivating, self-learning;
+* Sport-hobbies: roller skates, ice skating, runner, volleyball.

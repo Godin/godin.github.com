@@ -1,0 +1,23 @@
+---
+layout:     page
+permalink:  /projects/
+title:      Projects
+---
+
+h2. Projects
+
+During spare time, I work on:
+
+* "Sonar":http://sonar.codehaus.org/ - member since February 2010
+* "Sonar Plugins":http://sonar-plugins.codehaus.org/ - member since December 2009
+* "Sonar IDE":http://sonar-ide.codehaus.org/ - creator since January 2010
+* "Hudson CI":http://hudson-ci.org/ - member since January 2010
+* "Jenkins CI":http://jenkins-ci.org/ - member since January 2011
+* "Codehaus Mojo":http://mojo.codehaus.org/ - member since December 2009
+* "JaCoCo":http://jacoco.org/ - member since January 2011
+* "Maven":http://maven.apache.org/ - committer since January 2011
+* "Godin’s Gentoo Overlay":http://code.google.com/p/godin-gentoo-repository/ - creator and owner since April 2010
+* "Tycho":http://www.eclipse.org/tycho/
+
+ohloh account:
+<a href='https://www.ohloh.net/accounts/45362?ref=Detailed'><img alt='Ohloh profile for Evgeny Mandrikov' height='35' src='https://www.ohloh.net/accounts/45362/widgets/account_detailed.gif' width='191' /></a>

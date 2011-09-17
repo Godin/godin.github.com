@@ -1,1 +1,7 @@
-My GitHub Page
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+    {% include post.html %}
+{% endfor %}

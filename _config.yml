@@ -1,0 +1,29 @@
+auto:      true
+pygments:  true
+permalink: pretty
+paginate:  5
+
+exclude:
+    - README.md
+    - README.txt
+
+title: Godin
+feed:  /atom.xml
+
+author:
+    name: Evgeny Mandrikov
+
+nav:
+    - name: Blog
+      url:  /
+
+    - name: Curriculum Vitae
+      url:  /curriculum-vitae/
+
+    - name: Projects
+      url: /projects/
+
+css:
+    - http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css
+    - /css/my.css
+    - /css/syntax.css

@@ -1,0 +1,75 @@
+---
+layout: post
+title:  Game "predict behaviour" with Apache commons-configuration library
+---
+
+Simple question, which sometimes asked on interviews - "what will be printed after execution of following program?"
+Let’s ask this question against following program, which is based on commons-configuration library version 1.6 :
+
+{% highlight java %}
+import org.apache.commons.configuration.Configuration;
+import org.apache.commons.configuration.BaseConfiguration;
+import java.util.Arrays;
+
+public class Example {
+  public static void main(String[] args) {
+    Configuration configuration = new BaseConfiguration();
+    configuration.setProperty("key1", " value ");
+    configuration.setProperty("key2", " value1 , value2 ");
+
+    System.out.println("'" + configuration.getString("key1") + "'");
+    System.out.println("'" + configuration.getString("key2") + "'");
+    System.out.println(Arrays.toString(configuration.getStringArray("key1")));
+    System.out.println(Arrays.toString(configuration.getStringArray("key2")));
+  }
+}
+{% endhighlight %}
+
+Hard to predict output without documention.
+So Javadoc for method getString :
+
+<pre>
+Get a string associated with the given configuration key.
+ConversionException is thrown if the key maps to an object that is not a String.
+</pre>
+
+And Javadoc for method getStringArray :
+
+<pre>
+Get an array of strings associated with the given configuration key. If the key doesn't map to an existing object an empty array is returned.
+ConversionException is thrown if the key maps to an object that is not a String/List of Strings.
+</pre>
+
+Also on project site we can learn that getStringArray is able to split strings using list delimiter character (comma by default).
+This is a first surprise for consumers of API of interface Configuration : why this is not mentioned in Javadoc ?
+
+Also we can learn that getString method called for a property with multiple values will return only first one.
+Second surprise : why ? And again why not in Javadoc ?
+
+But OK - now based on all this knowledge we can predict following output :
+
+<pre>
+' value '
+' value1 '
+[ value ]
+[ value1 ,  value2 ]
+</pre>
+
+And boom - actually output will look like :
+
+<pre>
+' value '
+'value1'
+[ value ]
+[value1, value2]
+</pre>
+
+Final surprise : some values were trimmed!
+If this is done by getStringArray, then why this is not the case for key1 ?
+I tried to inspect Javadocs for class hierarchy ( Configuration -> AbstractConfiguration -> BaseConfiguration ), but did not found anything about trimming (and on site too).
+So you can find this behaviour only when your application will not work as you expect. Or if you will inspect source code of library.
+
+What all this means for you? You decide ;)
+But from my point of view : think twice before adding third-party dependencies into your application. And four times before exposing them in your API.
+
+Have fun!
