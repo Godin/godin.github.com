@@ -6,7 +6,9 @@
 {% endif %}
 </h2>
 
+<h6>
 {{ post.date | date:'%b %d %Y' | replace:'>0','>' }}
+</h6>
 
 {% if detail %}
     {{ content }}

@@ -7,8 +7,9 @@ exclude:
     - README.md
     - README.txt
 
-title: Godin
-feed:  /atom.xml
+title:   Godin
+comment: Man from nowhere
+feed:    http://feeds.feedburner.com/godin/
 
 author:
     name: Evgeny Mandrikov
