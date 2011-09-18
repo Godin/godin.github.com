@@ -13,6 +13,10 @@ feed:  /atom.xml
 author:
     name: Evgeny Mandrikov
 
+# Google Analytics
+ga:
+    id: UA-6691139-1
+
 nav:
     - name: Blog
       url:  /
