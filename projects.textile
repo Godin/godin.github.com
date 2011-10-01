@@ -15,6 +15,7 @@ During spare time, I work on:
 * "Jenkins CI":http://jenkins-ci.org/ - member since January 2011
 * "Codehaus Mojo":http://mojo.codehaus.org/ - member since December 2009
 * "JaCoCo":http://jacoco.org/ - member since January 2011
+* "EclEmma":http://eclemma.org/ - member since January 2011
 * "Maven":http://maven.apache.org/ - committer since January 2011
 * "Godin’s Gentoo Overlay":http://code.google.com/p/godin-gentoo-repository/ - creator and owner since April 2010
 * "Tycho":http://www.eclipse.org/tycho/
