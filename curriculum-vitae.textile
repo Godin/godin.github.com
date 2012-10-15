@@ -77,7 +77,7 @@ h4. Teaching activities
 ** Machine Learning
 ** Information security
 * Lecturing in school in Saint-Petersburg (2005-2006).
-* Lecturing in summer informatical camps for high school students in Chelyabinsk (2004-2006, 2010-2011).
+* Lecturing in summer informatical camps for high school students in Chelyabinsk (2004-2006, 2010-2012).
 
 h4. Personal
 
